@@ -1,4 +1,4 @@
-# This function returns the value of Copper electrical resistivity at any given temperature
+"""This function returns the value of Copper electrical resistivity at any given temperature"""
 
 def resistivity(temperature):
     R_20 = 1.72e-8      #Copper el. resistivity at ref. 20[degC]

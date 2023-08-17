@@ -1,4 +1,4 @@
-# This function returns all the cylinder's derived parameters given it's cross-section in [mm2]
+"""This function returns the cylinder's derived geometrical parameters given it's cross-section in [mm2]"""
 
 def cable(size):
     from math import sqrt, pi

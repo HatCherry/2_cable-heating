@@ -1,4 +1,4 @@
-# This function returns the HTC value of specified cylinder's at any given temperature, in defined ambient
+"""This function returns the HTC value of specified cylinder's at any given temperature, in defined ambient"""
 
 def convection(size, Tcable, Tambient):
     from cable import cable
