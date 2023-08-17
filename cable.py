@@ -1,4 +1,12 @@
-"""This function returns the cylinder's derived geometrical parameters given it's cross-section in [mm2]"""
+"""
+This function returns the cylinder's derived geometrical parameters given it's cross-section in [mm2]
+
+Example:
+Area, radius, diameter and characteristic length of 10mm2 cylinder is called by:
+
+>>> cable(10)
+9.999999999999999e-06 0.001784124116152771 0.003568248232305542 0.0028545985858444336
+"""
 
 def cable(size):
     from math import sqrt, pi

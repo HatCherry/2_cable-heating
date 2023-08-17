@@ -1,4 +1,12 @@
-"""This function returns the value of Copper electrical resistivity at any given temperature"""
+"""
+This function returns the value of Copper electrical resistivity at any given temperature
+
+Example:
+Resistivity of copper that is heated up to 135degC is called by:
+
+>>> resistivity(135)
+2.4835079999999996e-08
+"""
 
 def resistivity(temperature):
     R_20 = 1.72e-8      #Copper el. resistivity at ref. 20[degC]
