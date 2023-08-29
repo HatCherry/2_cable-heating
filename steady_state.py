@@ -1,14 +1,27 @@
-"""
-This function returns the temperature that specified cable should stabilize at, given its size, current flowing thorugh it, and the ambient temperature
+def steady_state(size, current, Tambient):
+    """
+    Calculate the steady-state temperature of a cable given its size, current flow, and ambient temperature.
 
-Example:
-25mm2 Cable under 200A load in 20degC ambient:
+    The function uses an iterative method to balance heat generated and lost, thereby finding the
+    temperature at which the cable should stabilize. It calls external functions `cable`, `resistivity`,
+    and `convection` to obtain necessary parameters for calculations.
+    
+    Parameters:
+    - size (float): The cross-sectional area of the cable in mm^2.
+    - current (float): The electric current flowing through the cable in Amperes.
+    - Tambient (float): The ambient temperature in degrees Celsius.
 
->>> steady_state(25,200,20)
-125.57038340954904
-"""
+    Returns:
+    - float: The steady-state temperature the cable should stabilize at, in degrees Celsius.
 
-def steady_state(size,current,Tambient):
+    Example:
+    >>> steady_state(25, 200, 20)
+    125.57038340954904
+
+    Note:
+    - This function is dependent on `cable`, `resistivity`, and `convection` functions.
+    - The tolerance for the iterative solution is set to 1e-6.
+    """
     from cable import cable
     from resistivity import resistivity
     from convection import convection

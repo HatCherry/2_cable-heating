@@ -1,6 +1,22 @@
 """
-This script is supposed to ask user for input values after providing all the information about restrictions, 
-and output the analytical solution for steady-state temperature of the specified cable under given electrical load
+This script calculates the steady-state temperature of a specified copper cylindrical cable under a given electrical load.
+
+The script provides information about valid cable sizes and their maximum current capacity.
+It then asks the user to input the cable size, electric current, and ambient temperature. 
+If the entered values are within acceptable limits, the script outputs the steady-state temperature 
+at which the cable should stabilize.
+
+The script relies on the `steady_state` function to perform the temperature calculation.
+
+Example:
+Run the script and follow the prompts to input the cable size, electric current, and ambient temperature.
+
+Constraints:
+1. Cable size should be within the valid sizes mentioned in the displayed table.
+2. Current should not exceed the maximum capacity of the selected cable size.
+
+Note:
+The script uses the Pandas library to display the table of valid cable sizes and their maximum current capacities.
 """
 import pandas as pd
 from steady_state import steady_state

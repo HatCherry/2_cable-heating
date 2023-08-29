@@ -1,14 +1,29 @@
-"""
-This function returns the HTC value of specified cylinder's at any given temperature, in defined ambient
-
-Example:
-HTC of a 10mm2 cable that is heated up to 135degC in 20degC ambient is called by:
-
->>> convection(10,20,135)
-18.077843796422492
-"""
-
 def convection(size, Tambient, Tcable):
+    """
+    Calculate the Heat Transfer Coefficient (HTC) of a specified cylinder at a given temperature 
+    in a defined ambient environment.
+    
+    The function uses the following dimensionless numbers for calculations:
+    - Prandtl
+    - Grashof
+    - Rayleigh
+    - Nusselt
+
+    Parameters:
+    - size (float): The size of the cylinder in mm^2.
+    - Tambient (float): The ambient temperature in degrees Celsius.
+    - Tcable (float): The cable temperature in degrees Celsius.
+    
+    Returns:
+    - float: The Heat Transfer Coefficient (HTC) at the given cable temperature in W/(m^2*K).
+    
+    Example:
+    >>> convection(10, 20, 135)
+    18.077843796422492
+
+    Note:
+    This function imports and uses the 'cable' function to get the cylinder's data.
+    """
     import numpy as np
     from cable import cable
     
