@@ -18,7 +18,6 @@ def resistivity(temperature):
     >>> resistivity(135)
     2.4835079999999996e-08
     """
-    
     R_20 = 1.72e-8  # Copper electrical resistivity at reference 20°C
     alfa = 0.00386  # Temperature coefficient of resistance (TCR) [1/°C]
     
